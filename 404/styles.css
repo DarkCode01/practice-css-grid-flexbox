@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+:root {
+  --var-color: rgb(51, 51, 51);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a { 
+  text-decoration: none;
+  color: var(--var-color);
+}
+
+p {
+  max-width: 400px;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 80px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--var-color);
+  height: 100vh;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+header .logo {
+  text-transform: uppercase;
+  font-weight: none;
+}
+
+main {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+main .content {
+  display: flex;
+  justify-content: space-around;
+}
+
+main .content .content-left {
+  flex-grow: auto;
+  align-self: center;
+}
+
+main .content .content-left img {
+  width: 100%;
+  height: auto;
+}
+
+main .content .content-right {
+  flex-grow: auto;
+}
+
+main .content .content-right .heading {
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
+main .content .content-right .description {
+  font-size: 24px;
+  margin-bottom: 80px;
+}
+
+main .content .content-right .link {
+  padding: 20px 28px;
+  background-color: var(--var-color);
+  color: white;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 20px;
+}
+
+footer .footer-content {
+  text-align: center;
+}
+
+@media only screen and (max-width: 660px) {
+  main .content {
+    display: block;
+  }
+}

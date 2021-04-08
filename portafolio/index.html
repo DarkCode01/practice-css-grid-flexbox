@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="header">
+      <div onclick="closeM()" class="close">x</div>
+    </div>
+    <div class="link">
+      <a href="" class="mobile-menu--item active">Home</a>
+      <a href="" class="mobile-menu--item">Collection</a>
+      <a href="" class="mobile-menu--item">About</a>
+      <a href="" class="mobile-menu--item">Contact</a>
+    </div>
+  </div>
+  <div class="container">
+    <header>
+      <div class="logo">This interior</div>
+      <nav class="navigation">
+        <a href="#home" class="active navigation--item">Home</a>
+        <a href="#collection" class="navigation--item">Collection</a>
+        <a href="#about" class="navigation--item">About</a>
+        <a href="#contact" class="navigation--item">Contact</a>
+      </nav>
+      
+      <div class="button-open">
+        <button onclick="openM()">Open</button>
+      </div>
+    </header>
+    <main>
+      <div class="content--left">
+          <h1 class="content--title">Modern interior</h1>
+          <p class="content-description">
+            A full-Service residential & commercial interior design and staging company offerinf professional organizing & eco-services.
+          </p>
+          <a href="" class="content--link">
+            Read more
+          </a>
+        </div>
+        <div class="content--right">
+          <div class="content-image-container">
+            <img src="https://placeimg.com/640/480/room" class="content-image">
+            <div class="content--card">
+              <div  class="content--card-header">
+                <div class="content--card-avatar">
+                  <img src="https://placeimg.com/640/480/any">
+                </div>
+                <div class="content--card-names">
+                  <div class="content--card-name">
+                    Alliza Webber
+                  </div>
+                  <div class="content--card-username">
+                    Interior designer
+                  </div>
+                </div>
+              </div>
+              <p class="content--card-body">
+                Designed in 2020 by Aliza Webber
+              </p>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <div class="footer">
+              created by <strong>darkcode01</strong>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menu = document.querySelector('#mobile-menu');
+    const openM = () => menu.style.display = "block";
+    const closeM = () => menu.style.display = "none";
+  </script>
+</body>
+</html>
