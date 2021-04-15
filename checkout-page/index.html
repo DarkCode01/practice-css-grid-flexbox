@@ -7,89 +7,148 @@
       content="width=device-width, initial-scale=1,
   maximum-scale=5"
     />
-
-    <link rel="icon" href="devchallenges.png" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css">
+    <title>Checkout</title>
 
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    <script defer src="icons/js/all.js"></script>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+    <div class="container">
+      <div class="heading">
+        <h1>Checkout</h1>
       </div>
+      <main>
+        <div class="form-container">
+          <form action="" class="form">
+            <div class="block">
+              <h4>Contact Information</h4>
+              <div class="form-control">
+                <label for="">E-mail</label>
+                <div class="input">
+                  <input type="text" placeholder="Enter your email...">
+                  <i class="fas fa-envelope icon"></i>
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="">Phone</label>
+                <div class="input">
+                  <input type="text" placeholder="Enter your phone...">
+                  <i class="fas fa-phone-alt icon"></i>
+                </div>
+              </div>
+            </div>
+  
+            <div class="block">
+              <h4>Shipping address</h4>
+              <div class="form-control">
+                <label for="Full name">Full name</label>
+                <div class="input">
+                  <input type="text" placeholder="Your full name...">
+                  <i class="fas fa-user-circle icon"></i>
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="Full name">Address </label>
+                <div class="input">
+                  <input type="text" placeholder="Your address...">
+                  <i class="fas fa-home icon"></i>
+                </div>
+              </div>
+              <div class="form-control">
+                <label for="Full name">City</label>
+                <div class="input">
+                  <input type="text" placeholder="Your city...">
+                  <i class="fas fa-city icon"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-control">
+                  <label for="Full name">Country</label>
+                  <div class="input">
+                    <input type="text" placeholder="Your country...">
+                    <i class="fas fa-globe-americas icon"></i>
+                  </div>
+                </div>
+                <div class="form-control">
+                  <label for="Full name">Postal code</label>
+                  <div class="input">
+                    <input type="text" placeholder="Your postal code...">
+                    <i class="fas fa-mail-bulk icon"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="form-control-checkbox">
+                <label for="" class="c c-checkbox">
+                  <input type="checkbox" name="" id="">
+                  <span class="c-label">Save thi infotmation for next time</span>
+                </label>
+              </div>
+            </div>
+  
+            <button>Continue</button>
+          </form>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div class="items">
+              <div class="card-item">
+                <div class="photo">
+                  <img src="img/photo1.png" alt="" srcset="">
+                </div>
+                <div class="content">
+                  <div class="title">Vintage Backbag</div>
+                  <div class="prices">
+                    <span>$54.99</span>
+                    <span>$9.46</span>
+                  </div>
+                  <div class="buttons">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-item">
+                <div class="photo">
+                  <img src="img/photo2.png" alt="" srcset="">
+                </div>
+                <div class="content">
+                  <div class="title">Vintage Backbag</div>
+                  <div class="prices">
+                    <span>$54.99</span>
+                    <span>$9.46</span>
+                  </div>
+                  <div class="buttons">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <hr>
+              <div class="footer-item">
+                <span>Shipping</span>
+                <span>$19</span>
+              </div>
+              <hr>
+              <div class="footer-item">
+                <span>Total</span>
+                <SPan>$148.98</SPan>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+      <footer>
+        <div class="footer">created by darkcoder</div>
+      </footer>
     </div>
   </body>
 </html>

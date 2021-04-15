@@ -1,0 +1,226 @@
+:root {
+  --color-label: #9aa6bf;
+  --color-default: #dee5f2;
+  --color-active: #0069ff;
+  --rotate-default: 180deg;
+  --rotate-active: 40deg;
+  --border-size-checkmark: 2px;
+  --border-size-box: 1px;
+  --input-size: 20px;
+  --guter: 8px;
+}
+
+* {
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.c,
+.c *,
+.c *::before,
+.c *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 20px 80px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.heading {
+  margin: 20px 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  width: 100%;
+}
+
+.block {
+  margin-bottom: 40px;
+}
+
+.block h4 {
+  margin: 0;
+}
+
+.form-control {
+  display: grid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form-control-checkbox {
+  margin: 10px 0;
+}
+
+.c {
+  cursor: pointer;
+  position: relative;
+}
+
+.c-label {
+  display: inline-block;
+  padding-left: var(--guter);
+  vertical-align: text-top;
+}
+
+.c > input { visibility: hidden; }
+
+c > input[type="checkbox"] {
+  clip-path: polygon(0 0);
+}
+
+/* change property values smoothly */
+.c .c-label::before,
+.c .c-label::after {
+  transition: all 0.2s ease-in-out;
+}
+
+/* an element for both checkbox and radio */
+.c .c-label::before {
+  content: '';
+  display: block;
+  width: var(--input-size);
+  height: var(--input-size);
+  border: var(--border-size-box) solid black;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: rotate(0deg) scale(1);
+  border-radius: 5px;
+}
+
+/* feedback when the user interacts with an element */
+.c .c-label:hover::before {
+  border-color: var(--color-active);
+}
+
+.c-label::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 18px;
+  border-width: 0 var(--border-size-checkmark) var(--border-size-checkmark) 0;
+  border-style: solid;
+  border-color: transparent var(--color-active) var(--color-active) transparent;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transform: rotate(var(--rotate-default)) scale(0);
+}
+
+.c.c-checkbox > input:checked + .c-label::before {
+  transform: rotate(var(--rotate-active)) scale(0);
+}
+
+/* checkmark */
+.c.c-checkbox > input:checked + .c-label::after {
+  left: 8px;
+  transform: rotate(var(--rotate-active)) scale(1);
+}
+
+label {
+  color: gray;
+}
+
+.input {
+  position: relative;
+}
+
+input[type="text"] {
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 10px 5px 10px 40px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  color: gray;
+  font-size: 20px;
+  left: 10px;
+  top: 13px;
+}
+
+form button {
+  float: right;
+  padding: 15px 40px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+
+  margin-top: 20px;
+  background-color: #F2994A;
+  color: white;
+}
+
+.card {
+  background-color: #F2F2F2;
+  padding: 20px 35px;
+  border-radius: 12px;
+  display: grid;
+  align-items: center;
+}
+
+.card-item {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.photo {
+  padding-right: 20px;
+  padding-bottom: 0;
+}
+
+.photo img {
+  border-radius: 10px;
+  width: 175px;
+  height: 175px;
+}
+
+.card-item .content {
+  display: grid;
+  grid-template-rows: 20% 20% auto;
+}
+
+.card-item .content .title, .prices {
+  align-self: flex-start;
+}
+
+.card-item .content .buttons {
+  align-self: flex-end;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  margin-top: 100px;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-between;
+}
